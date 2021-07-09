@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>SaaS 系统 Landing Page 设计的两种策略 | 测板分享</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://EnEBE.github.io/favicon.ico?v=1625837420920">
+<link rel="stylesheet" href="https://EnEBE.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="你是一个“设计师”，在做一个 SaaS 系统，希望通过 Landing Page 来增加用户注册量，设计了一个充满心思与华丽视觉的页面，希望用户能够在看到这样的页面后，能够被其吸引，注册、付费... ...
+但是，请注意，不要陷入自嗨，不要..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://EnEBE.github.io">
+        <img src="https://EnEBE.github.io/images/avatar.png?v=1625837420920" class="site-logo">
+        <h1 class="site-title">测板分享</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 粤ICP备19070269号-1 | <a class="rss" href="https://EnEBE.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">SaaS 系统 Landing Page 设计的两种策略</h2>
+            <div class="post-date">2021-01-15</div>
+            
+            <div class="post-content" v-pre>
+              <p>你是一个“设计师”，在做一个 SaaS 系统，希望通过 Landing Page 来增加用户注册量，设计了一个充满心思与华丽视觉的页面，希望用户能够在看到这样的页面后，能够被其吸引，注册、付费... ...</p>
+<p>但是，请注意，不要陷入自嗨，不要让已经登录的用户，使用系统时，每次都要先看到你的 Landing Page，然后再进入系统。提升用户使用体验秘诀之一是减少无用时间。</p>
+<p>那么如何为已登录用户（他们是你产品盈利的最佳人选）减少这个跳转呢？目前有两种策略，域名隔离和自动跳转。</p>
+<p>域名隔离<br>
+通过域名隔离，保证登录的用户也可以访问到 Landing page，例如 Mailbrew。但是这样的话 Landing Page 页的「登录」和「注册」按钮就成了一个纯跳转链接。这样的&quot;坏处&quot;是用户可能记住或搜索的是你的主域名，所以如果用户没有很好的使用习惯，例如将实际使用的域名（app.xxx.com）保存到收藏夹，记住，或安装 PWA 的话，还是会增加用户的使用成本。当使用域名隔离的方式时，有个关注点，使用主域名的二级域名且尽可能短，减少用户的记忆成本。</p>
+<p>自动跳转<br>
+已登录用户自动跳转进入系统。例如 Notion 等，用户访问域名，若是登录状态，即可直接进入系统使用。优点之一是方便。另外一点，是让用户忘记 Landing Page，因为这个时候 Landing Page 其实对用户并不是那么重要了。如果有资源（时间和精力）其实可以提供一个备用的 Landing Page 路由，如 xxx.com/landing 等。这样的话，手动提供一个给到用户。我个人是倾向这种方式。毕竟对于已经登录，且经常使用的用户来说，系统才是对他们最重要的部分，而不是每次打开时展示一个精美的 Landing Page。Landing Page 对于 onboarding，对于初次认识或尚在犹豫的用户是更有用的。吸引他们过来，将他们带入系统才是核心。而不是为了辛苦制作的精美 Landing Page 让更多人记住，更多时间的欣赏而浪费实际用户的时间。</p>
+<p>针对不同类型，可以采取不同的策略。</p>
+<p>当你在做微型 SaaS 的时候尤其如此，大部分情况下，你没有太多的内容，或者说实时内容在首页去更新，这一点区别于阿里云等相对繁重的大型系统，想到如果有内部功能的更新想告知已经使用的用户，可以有很多其他的方式。</p>
+<p>比如内建通知模块，通过blog和小icon，类似Mailbrew 和 Notion，通过社交媒体或社群触达。而且有时候这种触达效果可能会更好。人们在浏览首页时，往往无法一次性的浏览太长时间，与大量的内容。保持一定的精简性，对用户onboarding 可能也是一个好处，比如我就很难在阿里云首页去找到自己需要的关注点，不得不采用搜索来找到它。</p>
+<p>无论采用哪种策略，至少不要让已登录用户，每次都面对 Landing Page。</p>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
